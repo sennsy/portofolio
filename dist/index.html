@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="icon" type="image/png" href="/assets/favicon-Zae5A-6a.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>immszkyy</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+  <script type="module" crossorigin src="/assets/index-DDHQYOOi.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BOIUNsRn.css">
+</head>
+
+<script>
+document.addEventListener("mousemove", (e) => {
+    const photo = document.querySelector(".hero-photo");
+
+    if (!photo) return;
+
+    const x = (window.innerWidth / 2 - e.clientX) / 40;
+    const y = (window.innerHeight / 2 - e.clientY) / 40;
+
+    photo.style.transform = `translate(${x}px, ${y}px)`;
+});
+</script>
+
+<body class="intro-active">
+
+    <div class="mouse-glow"></div>
+
+    <div class="aurora">
+
+        <span></span>
+    
+        <span></span>
+    
+        <span></span>
+    
+        <span></span>
+    
+    </div>
+
+    <div id="intro">
+    
+        <div id="particles"></div>
+    
+        <div class="loader">
+    
+            <div id="loading-number">
+                0%
+            </div>
+    
+            <div class="loading-bar">
+                <div id="loading-fill"></div>
+            </div>
+    
+        </div>
+
+        <div id="intro-tagline">
+            JASA PEMBUATAN DESAIN GRAFIS
+        </div>
+        <img
+    id="intro-logo"
+    src="/assets/favicon-Zae5A-6a.png"
+    alt="Immszkyy Logo"
+>
+    </div>
+    
+<section class="hero">
+<section id="hero">
+
+    <nav class="navbar hero-navbar">
+
+    <img
+        src="/assets/favicon-Zae5A-6a.png"
+        alt="Logo Immszkyy"
+        class="nav-logo"
+        id="navbar-logo"
+    >
+
+    <button class="mobile-menu-btn">
+
+        <span></span>
+        <span></span>
+        <span></span>
+    
+    </button>
+
+    <ul class="nav-links" id="mainNav">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#portfolio">Portofolio</a></li>
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="#payment">Order</a></li>
+    </ul>
+
+    <a
+        href="https://www.instagram.com/immszkyy"
+        target="_blank"
+        class="social-tag"
+    >
+        @immszkyy
+    </a>
+
+</nav>  
+
+<nav class="navbar sticky-navbar">
+
+    <img
+    src="/assets/favicon-Zae5A-6a.png"
+    alt="Logo Immszkyy"
+    class="nav-logo"
+>
+
+<button class="mobile-menu-btn sticky-menu-btn" id="stickyMenuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<ul class="nav-links" id="stickyNav">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#portfolio">Portofolio</a></li>
+    <li><a href="#prices">Prices</a></li>
+    <li><a href="#payment">Order</a></li>
+</ul>
+
+<a
+    href="https://www.instagram.com/immszkyy"
+    target="_blank"
+    class="social-tag"
+>
+    @immszkyy
+</a>
+
+<div class="scroll-progress">
+    <div class="scroll-progress-fill"></div>
+</div>  
+</nav>
+
+<main class="hero">
+
+    <div class="container">
+
+        <canvas id="lanyardCanvas"></canvas>
+
+        <div class="hero-image-wrapper">
+
+            <div id="scene">
+        
+            </div>
+        
+        </div>
+
+        <div class="hero-text">
+
+            <p class="greeting">
+                Halo! Saya <span>Immszkyy</span>
+            </p>
+
+            <h1>Desainer Grafis.</h1>
+
+            <p class="description"></p>
+
+            <a href="#portfolio" class="cta-button">
+                Portofolio
+                <img src="/assets/arrow-Of2T8y2f.png" alt="" class="cta-arrow">
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<section id="portfolio" class="portfolio-section">  
+
+
+    <div class="main-container reveal">
+
+        <div class="left-section reveal-left delay1">
+
+            <div class="phone">
+                <img src="/assets/phone-instagram-I5zokFeZ.png" alt="Phone Preview" class="phone-image">
+            </div>
+
+        </div>
+
+        <div class="right-section reveal-right delay2">
+
+            <h1 class="reveal delay2">Portfolio Design</h1>
+
+            <div
+    class="tabs reveal delay3"
+    id="tabs"
+>
+            </div>
+
+            <div class="carousel-container reveal-scale delay4">
+
+                <button
+                    class="nav-btn prev-btn"
+                    onclick="move(-1)"
+                >
+                    ❮
+                </button>
+
+                <div
+                    class="track"
+                    id="track"
+                >
+                </div>
+
+                <button
+                    class="nav-btn next-btn"
+                    onclick="move(1)"
+                >
+                    ❯
+                </button>
+
+                <div
+                    class="portfolio-scroll-hint"
+                    id="portfolioScrollHint"
+                >
+                    Scroll <span>›› </span>
+                </div>
+
+            </div>
+
+            <p class="portfolio-note reveal delay4">
+                Untuk portofolio lengkap, cek Instagram
+                <a
+                    href="https://instagram.com/immszkyy"
+                    target="_blank"
+                >
+                    @immszkyy
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="prices" class="pricing-section">
+    
+
+    <div class="pricing-container reveal">
+
+        <h1 class="pricing-title reveal delay1">
+            Paket <span>Harga</span>
+        </h1>
+
+        <p class="pricing-subtitle reveal delay2">
+            Pilih Paket Harga Yang Sesuai Dengan Kebutuhan Anda!
+        </p>
+
+        <div class="pricing-cards">
+
+            <!-- BASIC -->
+            <div class="card reveal-left delay1">
+
+                <div class="brand">
+                    <img
+                        src="/assets/logo-hitam-774scauk.png"
+                        alt="Immszkyy Logo"
+                    >
+                </div>
+
+                <h2>Basic</h2>
+
+                <div class="price-container">
+                    <span class="old-price">
+                        Rp25K
+                    </span>
+
+                    <span class="price">
+                        Rp20.000
+                        <small>/Design</small>
+                    </span>
+                </div>
+
+                <button class="btn">
+                    Order Now
+                </button>
+
+                <ul class="specs">
+                    <li>✓ 2x Revisi</li>
+                    <li>✓ Estimasi Pengerjaan 1-2 Hari</li>
+                    <li>✓ +Rp5.000 Jika ingin pengerjaan lebih cepat</li>
+                </ul>
+
+            </div>
+
+            <!-- STANDARD -->
+            <div class="card popular reveal delay2">
+
+                <div class="badge">
+                    Populer
+                </div>
+
+                <div class="brand">
+                    <img
+                        src="/assets/logo-card-DPFmXn7s.png"
+                        alt="Immszkyy Logo"
+                    >
+                </div>
+
+                <h2>Standard</h2>
+
+                <div class="price-container">
+                    <span class="old-price">
+                        Rp40K
+                    </span>
+
+                    <span class="price">
+                        Rp30.000
+                        <small>/Design</small>
+                    </span>
+                </div>
+
+                <button class="btn">
+                    Order Now
+                </button>
+
+                <ul class="specs">
+                    <li>✓ 5x Revisi</li>
+                    <li>✓ Estimasi Pengerjaan 1-2 Hari</li>
+                    <li>✓ +5.000 Jika ingin pengerjaan lebih cepat</li>
+                </ul>
+
+            </div>
+
+            <!-- PREMIUM -->
+            <div class="card reveal-right delay3">
+
+                <div class="brand">
+                    <img
+                        src="/assets/logo-hitam-774scauk.png"
+                        alt="Immszkyy Logo"
+                    >
+                </div>
+
+                <h2>Premium</h2>
+
+                <div class="price-container">
+                    <span class="old-price">
+                        Rp70K
+                    </span>
+
+                    <span class="price">
+                        Rp55.000
+                        <small>/Design</small>
+                    </span>
+                </div>
+
+                <button class="btn">
+                    Order Now
+                </button>
+
+                <ul class="specs">
+                    <li>
+                        ✓ Unlimited Revisi kecil
+                        (warna, teks, dll)
+                    </li>
+
+                    <li>
+                        ✓ Estimasi Pengerjaan 1-2 Hari
+                    </li>
+
+                    <li>
+                        ✓ +10.000 Jika ingin pengerjaan lebih cepat
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section
+    id="payment"
+    class="contact-payment-section"
+>
+
+    <div class="payment-container reveal">
+
+        <!-- Kolom Kiri -->
+        <div class="contact-col reveal-left delay1">
+
+            <h2
+                class="title-light reveal delay1"
+                id="orderText"
+            >
+                Order?
+            </h2>
+
+            <h1 class="title-bold reveal delay2">
+                Contact <br> Us.
+            </h1>
+
+            <div class="contact-buttons reveal delay3">
+
+                <a
+                    href="#"
+                    id="btn-instagram"
+                    class="contact-btn"
+                    target="_blank">
+            
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+
+                <a
+                    href="#"
+                    id="btn-whatsapp"
+                    class="contact-btn"
+                    target="_blank">
+            
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+
+                <a
+                    href="#"
+                    id="btn-discord"
+                    class="contact-btn"
+                    target="_blank">
+            
+                    <i class="fa-brands fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+
+            </div>
+
+            <p class="instruction reveal">
+                CLICK SALAH SATU ICON UNTUK MEMULAI PESANAN
+            </p>
+
+        </div>
+
+        <!-- Kolom Kanan -->
+        <div class="payment-col">
+
+            <div class="payment-card">
+
+                <div
+                    id="testimonialWrapper"
+                    class="testimonial-wrapper"
+                >
+
+                    <div
+                        id="testimonialTrack"
+                        class="testimonial-track"
+                    >
+                        <!-- Diisi oleh index.js -->
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring">
+    <span class="cursor-text"></span>
+</div>
+
+<script src="script.js"></script>
+<script src="lanyard.js"></script>
+<script src="index.js"></script>    
+
+<footer class="footer">
+
+    <div class="footer-brand">
+
+        <img src="/assets/skill-BZp0xSL_.png" class="footer-logo">
+
+        <p class="footer-desc">
+            Saya ahli dalam Photoshop, mahir CapCut, dan familiar VS Code — menghasilkan konten visual profesional.
+
+        </p>
+
+    </div>
+
+    <div class="footer-column">
+
+        <h3>About</h3>
+
+        <a href="#">Home</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Prices</a>
+        <a href="#">Testimoni</a>
+
+    </div>
+
+    <div class="footer-column">
+
+        <h3>Services</h3>
+
+        <a href="#">Logo Design</a>
+        <a href="#">Banner</a>
+        <a href="#">Poster</a>
+        <a href="#">and others</a>
+
+    </div>
+
+    <div class="footer-column">
+
+        <h3>Social</h3>
+
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">Discord</a>
+
+    </div>
+
+</div>
+
+<div class="footer-bottom">
+    © 2026 Immszkyy. All Rights Reserved.
+</div>
+
+</footer>
+
+<script>
+
+    const number =
+    document.getElementById("loading-number");
+    
+    const fill =
+    document.getElementById("loading-fill");
+    
+    let progress = 0;
+    
+    const loader =
+    setInterval(() => {
+    
+        progress++;
+    
+        number.textContent =
+            progress + "%";
+    
+        fill.style.width =
+            progress + "%";
+    
+            if(progress >= 100){
+
+                clearInterval(loader);
+            
+                setTimeout(() => {
+            
+                    document.querySelector(".loader")
+                        .style.opacity = "0";
+            
+                    document
+                        .getElementById("intro-tagline")
+                        .classList.add("show");
+                        setTimeout(() => {
+
+                            document
+                                .getElementById("intro-tagline")
+                                .classList.add("hide");
+                        
+                        }, 1600);
+                        
+                        setTimeout(() => {
+                        
+                            document
+                                .getElementById("intro-logo")
+                                .classList.add("show");
+                        
+                        }, 2400);
+                        setTimeout(() => {
+
+                            const logo =
+                                document.getElementById(
+                                    "intro-logo"
+                                );
+                        
+                            const navbarLogo =
+                                document.getElementById(
+                                    "navbar-logo"
+                                );
+                        
+                            const logoRect =
+                                logo.getBoundingClientRect();
+                        
+                            const navRect =
+                                navbarLogo.getBoundingClientRect();
+                        
+                            const x =
+                                navRect.left -
+                                logoRect.left;
+                        
+                            const y =
+                                navRect.top -
+                                logoRect.top;
+                        
+                                logo.style.transition =
+                                `
+                                transform 1s cubic-bezier(.22,1,.36,1),
+                                opacity .4s ease
+                                `;
+                        
+                            logo.style.transform =
+                                `
+                                translate(
+                                    calc(-50% + ${x}px),
+                                    calc(-50% + ${y}px)
+                                )
+                                scale(.25)
+                                `;
+                        
+                        }, 3900);
+                        setTimeout(() => {
+
+                            intro.style.transition =
+                                "opacity .55s ease";
+                        
+                            intro.style.opacity = "0";
+                        
+                        }, 4100);
+                        setTimeout(() => {
+
+                            document.body
+                                .classList.remove(
+                                    "intro-active"
+                                );
+                        
+                                const navLogo =
+document.getElementById(
+    "navbar-logo"
+);
+
+navLogo.classList.add(
+    "logo-glow"
+);
+
+setTimeout(() => {
+
+    navLogo.classList.remove(
+        "logo-glow"
+    );
+
+}, 700);
+                            intro.remove();
+
+                            startLanyard();
+
+                            const description = document.querySelector(".description");
+
+                            const texts = [
+                            
+                            "Pengalaman lebih dari 2 tahun mendesain visual yang modern, kreatif, dan berorientasi pada hasil nyata bagi berbagai brand, bisnis, serta content creator demi meningkatkan performa bisnis.",
+                            
+                            "Seorang pelajar dengan keahlian Photoshop, berdedikasi menciptakan karya visual modern untuk membantu bisnis dan konten creator dalam menonjolkan identitas serta mencapai kesuksesan performa.",
+                            
+                            "Menawarkan jasa desain grafis profesional mulai dari branding, logo, ilustrasi, hingga konten media sosial, memastikan setiap visual tampil menarik, kreatif, dan relevan bagi kebutuhan klien."
+                            
+                            ];
+                            
+                            let currentText = 0;
+                            
+                            function typeText(){
+                            
+                                const text = texts[currentText];
+                            
+                                let i = 0;
+                            
+                                description.textContent = "";
+                            
+                                function typing(){
+                            
+                                    if(i < text.length){
+                            
+                                        description.textContent += text.charAt(i);
+                            
+                                        i++;
+                            
+                                        setTimeout(typing,15);
+                            
+                                    }else{
+                            
+                                        setTimeout(deleteText,5000);
+                            
+                                    }
+                            
+                                }
+                            
+                                function deleteText(){
+                            
+                                    if(i > 0){
+                            
+                                        i--;
+                            
+                                        description.textContent =
+                                        text.substring(0,i);
+                            
+                                        setTimeout(deleteText,8);
+                            
+                                    }else{
+                            
+                                        currentText++;
+                            
+                                        if(currentText >= texts.length){
+                            
+                                            currentText = 0;
+                            
+                                        }
+                            
+                                        setTimeout(typeText,350);
+                            
+                                    }
+                            
+                                }
+                            
+                                typing();
+                            
+                            }
+                            
+                            typeText();
+                        
+                            document
+                                .querySelectorAll(
+                                    ".container, .hero-photo, .greeting, .hero-text h1, .description, .cta-button"
+                                )
+                                .forEach(el => {
+                        
+                                    el.style.animation =
+                                        "none";
+                        
+                                    void el.offsetWidth;
+                        
+                                    el.style.animation =
+                                        "";
+                        
+                                });
+                        
+                        }, 4500);
+            
+                }, 300);
+            
+            }
+    }, 18);
+    
+    </script>
+
+    <div class="bottom-vignette"></div>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"68cb7c1588884b49a636e9bd1725ee34","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
+
+

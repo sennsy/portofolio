@@ -1,0 +1,1180 @@
+/* ===================================================
+   MOBILE RESPONSIVE OVERRIDES
+
+   Desktop = style.css
+   Mobile = file ini saja
+
+=================================================== */
+
+@media screen and (max-width:768px){
+
+    
+
+    /* ===========================
+       BODY
+    =========================== */
+    
+    /* ==========================================
+   GLOBAL MOBILE FIX
+========================================== */
+
+html{
+
+    width:100%;
+
+    overflow-x:hidden !important;
+
+    overflow-y:auto !important;
+
+    scroll-behavior:smooth;
+
+    scroll-snap-type:none !important;
+
+}
+
+body{
+
+    width:100%;
+
+    min-height:100vh;
+
+    overflow-x:hidden !important;
+
+    overflow-y:auto !important;
+
+}
+
+section{
+
+    width:100%;
+
+    max-width:100%;
+
+    overflow:hidden;
+
+    scroll-snap-align:none !important;
+
+    scroll-snap-stop:normal !important;
+
+}
+
+:root{
+
+    /* ukuran gambar portfolio di mobile, dipakai bareng
+       di .slide img dan .carousel-container biar selalu sinkron */
+
+    --slide-w: clamp(280px, 92vw, 400px);
+
+}
+
+/* Section portfolio butuh overflow visible supaya gambar phone
+   bisa membesar bebas keluar dari batas container tanpa terpotong.
+   Batas horizontal tetap aman karena html & body sudah overflow-x:hidden */
+
+#portfolio{
+
+    overflow:visible;
+
+}
+
+/* ==========================================
+   UNIVERSAL FIX
+========================================== */
+
+*{
+
+    max-width:100%;
+
+}
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+    display:block;
+
+}
+
+canvas{
+
+    max-width:100%;
+
+}
+
+video{
+
+    max-width:100%;
+
+}
+
+svg{
+
+    max-width:100%;
+
+}
+
+/* ==========================================
+   FLEX FIX
+========================================== */
+
+.container,
+.main-container,
+.pricing-container,
+.contact-payment-section .container{
+
+    width:100%;
+
+    max-width:100%;
+
+    margin:0 auto;
+
+}
+
+/* ==========================================
+   HARD RESET
+========================================== */
+
+.left-section,
+.right-section,
+.contact-col,
+.payment-col{
+
+    margin:0 !important;
+
+    left:auto !important;
+
+    right:auto !important;
+
+    top:auto !important;
+
+    bottom:auto !important;
+
+}
+
+/* ==========================================
+   DISABLE DESKTOP OFFSET
+========================================== */
+
+.phone-image{
+
+    left:0 !important;
+
+}
+
+.payment-card{
+
+    margin:0 !important;
+
+}
+
+.hero-image-wrapper{
+
+    margin:0 auto;
+
+}
+
+/* ==========================================
+   PREVENT HORIZONTAL SCROLL
+========================================== */
+
+body *{
+
+    box-sizing:border-box;
+
+}
+    
+    /* ===========================
+       INTRO
+    =========================== */
+
+    #loading-number{
+        font-size:2.6rem;
+        margin-bottom:20px;
+    }
+
+    .loading-bar{
+        width:70vw;
+        max-width:280px;
+    }
+
+    #intro-tagline{
+        font-size:1.05rem;
+        letter-spacing:3px;
+        white-space:normal;
+        max-width:88vw;
+        padding:0 10px;
+    }
+
+    #intro-logo{
+        width:120px;
+    }
+
+    /* ===========================
+       HERO
+    =========================== */
+    
+    .hero{
+        padding:0 18px;
+        margin-top:22px;
+        margin-bottom:70px;
+    }
+    
+    .container{
+    
+        width:100%;
+        height:auto;
+    
+        min-height:980px;
+    
+        padding:
+    
+        45px
+        28px
+        45px;
+    
+        border-radius:34px;
+    
+        display:flex;
+        flex-direction:column;
+    
+        justify-content:flex-start;
+        align-items:center;
+    
+        gap:32px;
+    
+        overflow:hidden;
+    
+        position:relative;
+    }
+    
+    /* ===========================
+       NAVBAR
+    =========================== */
+
+    .mobile-menu-btn{
+
+        display:flex;
+        
+        flex-direction:column;
+        
+        justify-content:center;
+        
+        gap:6px;
+        
+        width:48px;
+        
+        height:48px;
+        
+        background:none;
+        
+        border:none;
+        
+        padding:0;
+        
+        }
+        
+        .mobile-menu-btn span{
+        
+        width:30px;
+        
+        height:3px;
+        
+        background:#fff;
+        
+        border-radius:999px;
+        
+        display:block;
+        
+        }
+    
+    .hero-navbar{
+    
+        margin:0 18px;
+    
+        padding:
+    
+        18px
+        22px;
+    
+        border-radius:28px;
+    
+        display:flex;
+    
+        align-items:center;
+    
+        justify-content:space-between;
+
+        position:relative;
+
+        z-index:200;
+    }
+    
+    .hero-navbar .nav-logo{
+    
+        height:28px;
+    
+    }
+    
+    /* sembunyikan menu desktop */
+    
+    .hero-navbar .nav-links{
+    
+        display:none;
+    
+    }
+
+    .hero-navbar .nav-links.show{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:18px;
+
+        position:absolute;
+
+        top:calc(100% + 12px);
+
+        left:18px;
+
+        right:18px;
+
+        width:auto;
+
+        padding:22px 26px;
+
+        border-radius:24px;
+
+        background:
+        linear-gradient(
+            145deg,
+            #403f3f,
+            #1a1a1a
+        );
+
+        border:1px solid rgba(255,255,255,.08);
+
+        box-shadow:0 20px 45px rgba(0,0,0,.45);
+
+        z-index:500;
+
+    }
+    
+    .hero-navbar .social-tag{
+    
+        display:none;
+    
+    }
+    
+    /* ===========================
+       HERO IMAGE
+    =========================== */
+    
+    .hero-image-wrapper{
+    
+        width:100%;
+    
+        height:570px;
+    
+        display:flex;
+    
+        justify-content:center;
+    
+        align-items:flex-start;
+    
+        margin-top:-100px;
+    
+        position:relative;
+    
+    }
+    
+    #scene{
+    
+        width:100%;
+        height:100%;
+    
+    }
+    
+    #lanyardCanvas{
+    
+        width:100%;
+        height:100%;
+    
+    }
+    
+    /* ===========================
+       HERO TEXT
+    =========================== */
+    
+    .hero-text{
+    
+        width:100%;
+    
+        text-align:left;
+    
+        align-items:flex-start;
+    
+        z-index:100;
+    
+    }
+    
+    .greeting{
+    
+        font-size:20px;
+    
+        margin-bottom:6px;
+    
+    }
+    
+    .hero-text h1{
+    
+        font-size:57px;
+    
+        line-height:.95;
+    
+        letter-spacing:-2px;
+    
+        margin-bottom:18px;
+    
+    }
+    
+    .description{
+    
+        font-size:16px;
+    
+        line-height:1.8;
+    
+        max-width:100%;
+    
+        min-height:230px;
+    
+        margin-bottom:34px;
+    
+    }
+    
+    /* ===========================
+       BUTTON
+    =========================== */
+    
+    .cta-button{
+    
+        width:100%;
+    
+        height:62px;
+    
+        border-radius:999px;
+    
+        justify-content:center;
+    
+        font-size:19px;
+    
+    }
+    
+    .cta-arrow{
+    
+        width:20px;
+        height:20px;
+    
+    }
+    
+    /* ===========================
+       STICKY NAVBAR
+    =========================== */
+    
+    .sticky-navbar{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:space-between;
+
+        left:18px;
+
+        right:18px;
+
+        padding:14px 20px;
+
+    }
+
+    /* Hamburger sticky navbar dibuat lebih kecil,
+       menyesuaikan ukuran sticky navbar yang lebih ringkas
+       dari navbar hero. Style tetap sama, cuma diperkecil. */
+
+    .sticky-menu-btn{
+
+        width:34px;
+
+        height:34px;
+
+        gap:5px;
+
+    }
+
+    .sticky-menu-btn span{
+
+        width:22px;
+
+        height:2px;
+
+    }
+
+    .sticky-navbar .nav-logo{
+
+        height:26px;
+
+    }
+
+    /* sembunyikan tag sosmed & menu desktop, sama seperti navbar hero */
+
+    .sticky-navbar .social-tag{
+
+        display:none;
+
+    }
+
+    .sticky-navbar .nav-links{
+
+        display:none;
+
+    }
+
+    /* ===========================
+       PORTFOLIO
+    =========================== */
+
+    .main-container{
+        flex-direction:column;
+        align-items:stretch;
+        gap:30px;
+        overflow:visible;
+    }
+
+    .left-section{
+        width:100% !important;
+        max-width:none !important;
+        display:flex;
+        justify-content:center;
+        overflow:visible;
+    }
+
+    .right-section{
+
+        width:100%;
+
+    }
+
+    .phone{
+
+        width:100%;
+
+        display:flex;
+
+        justify-content:center;
+
+        overflow:visible;
+
+    }
+
+    /* Dibesarkan & dibiarkan bebas keluar dari batas .phone /
+       .left-section — tidak lagi dibatasi 100vw supaya bisa
+       tampil lebih besar. Aman dari scrollbar horizontal karena
+       html & body tetap overflow-x:hidden. */
+
+    .phone-image{
+        width:132vw !important;
+        max-width:none !important;
+        position:relative;
+        z-index:2;
+    }
+
+    .right-section h1{
+
+        font-size:2.4rem;
+
+        text-align:center;
+
+    }
+
+    .tabs{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:10px;
+
+    }
+
+    .tab-btn{
+
+        padding:10px 20px;
+
+        font-size:15px;
+
+    }
+
+    /* Revisi: gausah carousel + panah lagi. Gaya gallery
+       nge-loop horizontal ala referensi (gambar tengah full,
+       kiri-kanan ngintip dikit), bisa discroll pake tangan
+       (native touch scroll), auto-scroll-nya pelan & smooth
+       (di-handle lewat JS di script.js), dan looping-nya pakai
+       sistem yang sama kayak testimonial (slide digandain +
+       posisi di-reset biar keliatan nyambung terus). */
+
+       .carousel-container{
+        height:auto;
+        overflow-x:auto;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
+        scroll-behavior:smooth;
+        scrollbar-width:none;
+    
+        /* Full-bleed tetap dipertahankan */
+        width:100vw;
+        max-width:100vw;
+        position:relative;
+        left:50%;
+        right:auto;
+        margin-left:-50vw;
+        margin-right:0;
+    
+        /* Tambahan agar TIDAK TERLIHAT secara visual */
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+        /* Hilangkan warna latar default jika ada */
+        background-color: transparent !important;
+        /* Pastikan tidak ada warna dari lapisan lain */
+        mix-blend-mode: normal;
+        opacity: 1; /* Jangan 0, nanti isinya juga hilang */
+        visibility: visible;
+    }
+    
+    .carousel-container::-webkit-scrollbar{
+        display:none;
+    }
+    
+    .right-section{
+
+        overflow:visible;
+
+    }
+
+    /* Track jadi baris flex biasa (bukan absolute stack lagi),
+       padding kiri-kanan sengaja dibikin biar gambar paling
+       ujung tetap keliatan "ngintip" persis kayak referensi */
+
+    .track{
+
+        display:flex;
+
+        align-items:center;
+
+        gap:14px;
+
+        width:max-content;
+
+        padding:8px 14vw;
+
+    }
+
+    /* Override sistem posisi absolute punya desktop (active/
+       prev/next) supaya di mobile semua slide jadi flex item
+       statis yang natural buat discroll manual */
+
+    .slide{
+
+        position:relative !important;
+
+        top:auto !important;
+        left:auto !important;
+
+        transform:none !important;
+
+        flex:0 0 auto;
+
+        opacity:1 !important;
+        filter:none !important;
+        z-index:1 !important;
+
+        scroll-snap-align:center;
+
+    }
+
+    .slide.active,
+    .slide.prev,
+    .slide.next{
+
+        transform:none !important;
+        opacity:1 !important;
+        filter:none !important;
+
+    }
+
+    .carousel-container{
+
+        /* proximity, bukan mandatory - biar auto-scroll pelan
+           gak "digigit"/dipatahin snapping tiap frame. Snap
+           tetap kerasa waktu discroll manual dan berhenti */
+        scroll-snap-type:x proximity;
+
+    }
+
+    .slide img{
+
+        width:var(--slide-w);
+
+        height:auto;
+
+        aspect-ratio:340 / 460;
+
+        border-radius:30px;
+
+        cursor:pointer;
+
+    }
+
+    /* Panah carousel gausah dipake lagi di mobile */
+
+    .nav-btn{
+
+        display:none;
+
+    }
+
+    /* Instruksi "Scroll >>" - nongol nempel di kanan galeri
+       waktu awal buka, kasih tau kalau gambar bisa digeser
+       tangan (loop kiri-kanan), lalu ilang begitu discroll */
+
+    .portfolio-scroll-hint{
+
+        display:flex;
+        align-items:center;
+        gap:4px;
+
+        position:absolute;
+
+        right:6vw;
+        bottom:14px;
+
+        z-index:5;
+
+        padding:8px 16px;
+
+        font-size:.8rem;
+        font-weight:600;
+        letter-spacing:.5px;
+        color:var(--white);
+
+        background:rgba(20,20,20,.55);
+        backdrop-filter:blur(8px);
+        -webkit-backdrop-filter:blur(8px);
+
+        border:1px solid rgba(255,255,255,.15);
+        border-radius:100px;
+
+        pointer-events:none;
+
+        opacity:1;
+        transform:translateY(0);
+
+        transition:
+            opacity .5s ease,
+            transform .5s ease;
+
+        animation:
+            portfolioScrollHintNudge
+            1.3s
+            ease-in-out
+            infinite;
+
+    }
+
+    .portfolio-scroll-hint.hide{
+
+        opacity:0;
+        transform:translateY(8px);
+
+    }
+
+    .portfolio-scroll-hint span{
+
+        display:inline-block;
+
+        animation:
+            portfolioScrollHintArrow
+            1.3s
+            ease-in-out
+            infinite;
+
+    }
+
+
+    @keyframes portfolioScrollHintNudge{
+
+        0%, 100%{ transform:translateX(0); }
+        50%{ transform:translateX(-6px); }
+
+    }
+
+    @keyframes portfolioScrollHintArrow{
+
+        0%, 100%{ opacity:1; transform:translateX(0); }
+        50%{ opacity:.4; transform:translateX(4px); }
+
+    }
+
+    }
+
+    @media (min-width:769px){
+
+        .mobile-menu-btn{
+        
+        display:none;
+        
+        }
+        
+        }
+
+@media screen and (max-width:768px){
+
+    .cursor-dot,
+    .cursor-ring{
+
+        display:none;
+
+    }
+
+    /* ===========================
+       PRICING
+    =========================== */
+
+    .pricing-container{
+
+        padding:40px 16px 50px;
+
+    }
+
+    .pricing-title{
+
+        font-size:2.4rem;
+
+        letter-spacing:-1px;
+
+    }
+
+    .pricing-subtitle{
+
+        font-size:1.05rem;
+
+        padding:0 6px;
+
+    }
+
+    .pricing-cards{
+
+        gap:20px;
+
+    }
+
+    .card{
+
+        padding:26px 22px;
+
+        min-height:auto;
+
+    }
+
+    .card h2{
+
+        font-size:2.3rem;
+
+        margin-bottom:22px;
+
+    }
+
+    .price-container{
+
+        margin-bottom:22px;
+
+    }
+
+    .price{
+
+        font-size:2rem;
+
+    }
+
+    .specs{
+
+        margin-top:22px;
+
+    }
+
+    .specs::before{
+
+        font-size:1.05rem;
+
+        margin-bottom:14px;
+
+    }
+
+    .specs li{
+
+        margin-bottom:12px;
+
+        font-size:0.95rem;
+
+    }
+
+    /* ===========================
+       CONTACT & PAYMENT
+    =========================== */
+
+    .contact-payment-section{
+        --contact-section-padding: 50px 20px;
+        --contact-btn-size: 110px;
+        --contact-icon-size: 28px;
+        --contact-btn-gap: 12px;
+        padding:var(--contact-section-padding);
+    }
+
+    .title-light{
+
+        font-size:3.4rem;
+
+    }
+
+    .title-bold{
+
+        font-size:4rem;
+
+        margin-bottom:28px;
+
+    }
+
+    .contact-payment-section .payment-container,
+    .contact-payment-section .container{
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+    width:100%;
+    }
+
+    .contact-col{
+        transform:none;
+        width:100%;
+        padding-bottom:18px;
+
+    }
+
+    .payment-card{
+
+        margin-top:25px !important;
+    
+    }
+
+    .contact-buttons{
+        justify-content:center;
+        flex-wrap:nowrap;
+        gap:var(--contact-btn-gap);
+        width:100%;
+    }
+
+    .contact-btn{
+
+        width:var(--contact-btn-size);
+    
+        height:110px;
+    
+        flex:0 1 auto;
+    
+        display:flex;
+    
+        flex-direction:column;
+    
+        justify-content:center;
+    
+        align-items:center;
+    
+        gap:10px;
+    
+    }
+    
+    .contact-btn i{
+
+        font-size:var(--contact-icon-size);
+    
+        margin-bottom:8px;
+    
+    }
+    
+    .contact-btn span{
+    
+        font-size:14px;
+    
+        line-height:1.2;
+    
+        text-align:center;
+    
+    }
+
+    .instruction{
+
+        margin-top:22px;
+    
+        margin-bottom:44px;
+
+        margin-left:-45px;
+    
+        line-height:1.6;
+    
+        font-size:15px;
+    
+    }
+
+    .testimonial-wrapper{
+        height:460px;
+        border-radius:30px;
+    }
+
+    .testimonial-track{
+        padding:28px 22px;
+        gap:14px;
+    }
+
+    .testimonial-item{
+        padding:16px 18px;
+        border-radius:18px;
+        gap:12px;
+    }
+
+    .testimonial-avatar{
+        width:48px;
+        height:48px;
+    }
+
+    .testimonial-name{
+        font-size:14px;
+    }
+
+    .testimonial-msg{
+        font-size:13px;
+    }
+
+    /* ===========================
+       FOOTER
+    =========================== */
+
+    .footer{
+
+        grid-template-columns:repeat(2, 1fr);
+
+        gap:28px 20px;
+
+        padding:40px 22px 34px;
+
+        text-align:left;
+
+    }
+
+    .footer-brand{
+
+        grid-column:1 / -1;
+
+        max-width:100%;
+
+    }
+
+    .footer-logo{
+
+        width:130px;
+
+        margin-bottom:14px;
+
+    }
+
+    .footer-desc{
+
+        font-size:14px;
+
+        line-height:1.6;
+
+    }
+
+    .footer-column h3{
+
+        margin-bottom:14px;
+
+        font-size:16px;
+
+    }
+
+    .footer-column a{
+
+        margin-bottom:10px;
+
+    }
+
+    .footer-bottom{
+
+        margin-top:24px;
+
+        padding-top:18px;
+
+        font-size:13px;
+
+    }
+
+    /* ===========================
+       BACKGROUND FIX
+       (large animated blur elements
+       cause block/noise artifacts
+       on mobile GPU compositing)
+    =========================== */
+
+    body .aurora span{
+
+        /* lebar diperkecil & blur diperbesar supaya proporsional
+           dengan layar sempit — mencegah tepi kotak terlihat */
+
+        display:none;
+
+    }
+
+    /* kurangi jumlah lapisan aktif di mobile untuk mengurangi noise/overdraw */
+
+    body .aurora span:nth-child(3),
+    body .aurora span:nth-child(4){
+
+        display:none;
+
+    }
+
+    /* mouse-glow mengikuti posisi kursor mouse yang tidak ada
+       di layar sentuh — matikan agar tidak jadi elemen blur
+       tambahan yang mengganggu di background */
+
+    .mouse-glow{
+
+        display:none !important;
+
+    }
+
+}
+
+.pricing-section{
+    padding-bottom:30px;
+}
+
+.contact-payment-section{
+    margin-top:0;
+    padding-top:20px;
+}
+
